@@ -7,7 +7,7 @@
 
 <br>
 
-## Tasks Completed: 
+## Tasks Completed 
 - Project Design And Planning
     - Ideation Phase
         -  [x] Literature Survey <br>
