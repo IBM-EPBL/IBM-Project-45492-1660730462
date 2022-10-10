@@ -18,7 +18,10 @@
         - [x] Propsed Solution <br>
         - [x] Problem Solution Fit <br>
         - [x] Solution Architecture <br>
+    - Project Design Phase I
+        - [x] Propsed Solution <br>
 - Assignments
     -  [x] Assignment 1 <br>
     -  [x] Assignment 2  <br>    
+    -  [x] Assignment 3  <br>    
 <br>
