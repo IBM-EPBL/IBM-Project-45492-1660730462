@@ -1,0 +1,7 @@
+flask==2.2.2
+flask_cors
+setuptools
+psycopg2-binary
+flask-sqlalchemy
+cerberus
+PyJWT
