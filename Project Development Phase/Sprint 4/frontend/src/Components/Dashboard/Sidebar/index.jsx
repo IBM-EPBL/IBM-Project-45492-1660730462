@@ -1,0 +1,50 @@
+import { faHouse, faMicrochip, faClockRotateLeft, faGear } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { colors, List, ListItemButton, Typography } from "@mui/material";
+import { Box } from "@mui/system";
+import React from "react";
+import { useEffect } from "react";
+import { Link, useMatch } from "react-router-dom";
+
+export default function Sidebar() {
+
+    const ListItem = ({title, to, icon}) => {
+
+        const match = useMatch(to)
+        useEffect(()=>{console.log('match')}, [])
+        const liButtonStyle = {
+            padding: 1.5,
+            marginBlock: 1,
+            paddingInline: 1,
+            paddingLeft: 2,
+            borderRadius: 4,
+            onfocus: colors.blue,
+            '&:hover':{
+                backgroundColor: "#FF9D67"
+            },
+
+            '&.active':{
+                borderLeft: 20,
+                borderColor: "#FF9D67",
+                // borderColor: "orange",
+                
+            }
+        };
+        return(
+            <ListItemButton  sx={liButtonStyle} className={match ? "active": ""} LinkComponent={Link} to={to}>
+                <FontAwesomeIcon icon={icon} size="lg" type="standard"/> <Typography sx={{marginLeft: 2}} fontSize="1">{title}</Typography>
+            </ListItemButton>
+        )
+    }
+
+    return (
+        <Box>
+            <List sx={{ marginInline: 1, marginTop: 3 }}>
+                <ListItem title="Home" icon={faHouse} to="home"/>
+                <ListItem title="Prediction" icon={faMicrochip} to="prediction"/>
+                <ListItem title="Prediction History" icon={faClockRotateLeft} to="history"/>
+                <ListItem title="Settings" icon={faGear} to="settings"/>
+            </List>
+        </Box>
+    );
+}

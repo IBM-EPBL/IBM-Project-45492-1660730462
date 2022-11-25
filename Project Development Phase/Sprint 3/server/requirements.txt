@@ -1,0 +1,16 @@
+flask==2.2.2
+flask_cors
+setuptools
+psycopg2-binary
+flask-sqlalchemy
+cerberus
+PyJWT
+Authlib
+requests
+numpy
+pandas
+seaborn
+matplotlib
+scikit-learn
+fpdf2
+schedule
